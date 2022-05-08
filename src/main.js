@@ -1,6 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
 import Vuesax from "vuesax";
+import router from "./router";
+import store from "./store";
 import "./assets/styles/index.css";
 import "vuesax/dist/vuesax.css";
 
@@ -15,5 +17,7 @@ Vue.use(Vuesax, {
   },
 });
 new Vue({
+  router,
+  store,
   render: (h) => h(App),
 }).$mount("#app");
