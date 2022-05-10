@@ -1,5 +1,7 @@
 <template>
-  <div class="header mx-auto max-w-7xl flex justify-between items-center">
+  <div
+    class="header mx-auto xl:max-w-5xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg flex justify-between items-center h-16"
+  >
     <div class="logo w-32 h-12">
       <img
         class="w-full h-full"

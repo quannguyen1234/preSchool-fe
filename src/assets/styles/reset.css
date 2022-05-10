@@ -1,0 +1,29 @@
+input {
+    width: 100% !important;
+}
+.save-change > .vs-button__content {
+    font-size: 20px;
+}
+.search .vs-input {
+    background-color: white;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #00fc26;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ED4D27;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(252, 95, 4);
+}
