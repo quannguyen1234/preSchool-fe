@@ -19,7 +19,7 @@
           những thông tin cần thiết bên dưới (bên phải).
         </p>
       </div>
-      <div class="container-form flex justify-between">
+      <div class="container-form flex justify-evenly">
         <div
           class="change-pass border border-[#ED4D27] rounded-xl p-5 w-2/5 pt-0"
         >
@@ -140,10 +140,10 @@
 </template>
 
 <script>
-import Eye from "../../components/icons/eye.vue";
-import EyeOff from "../../components/icons/eyeOff.vue";
-import Header from "../../components/header/index.vue";
-import Bottom from "../../components/footer/index.vue";
+import Eye from "../../../components/icons/eye.vue";
+import EyeOff from "../../../components/icons/eyeOff.vue";
+import Header from "../../../components/header/index.vue";
+import Bottom from "../../../components/footer/index.vue";
 export default {
   data: () => ({
     value: "",

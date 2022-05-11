@@ -20,8 +20,8 @@
           />
         </div>
         <div class="flex gap-3">
-          <router-link :to="{ name: 'Home' }"><Bell></Bell></router-link>
-          <router-link :to="{ name: 'Home' }"><Cart></Cart></router-link>
+          <router-link to="/"><Bell></Bell></router-link>
+          <router-link to="/list-product"><Cart></Cart></router-link>
           <router-link :to="{ name: 'Home' }"
             ><Messages></Messages
           ></router-link>

@@ -5,9 +5,8 @@ import router from "./router";
 import store from "./store";
 import "./assets/styles/index.css";
 import "vuesax/dist/vuesax.css";
-import SsrCarousel from "vue-ssr-carousel";
 import "vue-ssr-carousel/index.css";
-Vue.component("ssr-carousel", SsrCarousel);
+
 Vue.use(Vuesax, {
   colors: {
     primary: "#5b3cc4",
