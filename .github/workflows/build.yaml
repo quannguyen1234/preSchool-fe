@@ -27,3 +27,4 @@ jobs:
           BRANCH: master
           FOLDER: dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+# auto deploy NDN
