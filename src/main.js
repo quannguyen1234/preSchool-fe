@@ -18,7 +18,7 @@ Vue.use(Vuesax, {
 });
 import "./assets/styles/reset.css";
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = true;
 new Vue({
   router,
   store,

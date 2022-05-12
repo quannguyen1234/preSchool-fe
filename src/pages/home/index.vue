@@ -43,21 +43,17 @@
 </template>
 
 <script>
-import Header from "../../components/header/user.vue";
 import Navigation from "../../components/navigation/index.vue";
 import Carousel from "../../components/carousel/index.vue";
 import Categories from "./components/categories.vue";
 import Products from "../../components/products/index.vue";
-import Footer from "../../components/footer/user.vue";
 import topSearching from "../../components/mutil-carousel/index.vue";
 export default {
   components: {
-    Header,
     Navigation,
     Carousel,
     Categories,
     Products,
-    Footer,
     topSearching,
   },
 };

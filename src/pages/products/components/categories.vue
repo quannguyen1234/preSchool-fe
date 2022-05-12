@@ -12,6 +12,7 @@
       <ul class="mt-2">
         <li>
           <router-link
+            :to="{ name: 'ComingSoon' }"
             class="mt-1 py-2 pl-2 rounded-md block hover:bg-[#32CB00]"
             href=""
             >Lương thực</router-link
@@ -19,6 +20,7 @@
         </li>
         <li>
           <router-link
+            :to="{ name: 'ComingSoon' }"
             class="mt-1 py-2 pl-2 rounded-md block hover:bg-[#32CB00]"
             href=""
             >Thực phẩm đóng gói</router-link
@@ -26,6 +28,7 @@
         </li>
         <li>
           <router-link
+            :to="{ name: 'ComingSoon' }"
             class="mt-1 py-2 pl-2 rounded-md block hover:bg-[#32CB00]"
             href=""
             >Thực phẩm tươi sống</router-link
@@ -33,6 +36,7 @@
         </li>
         <li>
           <router-link
+            :to="{ name: 'ComingSoon' }"
             class="mt-1 py-2 pl-2 rounded-md block hover:bg-[#32CB00]"
             href=""
             >Bánh kẹo</router-link
@@ -40,6 +44,7 @@
         </li>
         <li>
           <router-link
+            :to="{ name: 'ComingSoon' }"
             class="mt-1 py-2 pl-2 rounded-md block hover:bg-[#32CB00]"
             href=""
             >Gia vị</router-link
@@ -47,6 +52,7 @@
         </li>
         <li>
           <router-link
+            :to="{ name: 'ComingSoon' }"
             class="mt-1 py-2 pl-2 rounded-md block hover:bg-[#32CB00]"
             href=""
             >Nhu yếu phẩm khác</router-link

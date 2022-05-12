@@ -1,7 +1,12 @@
 <template>
   <div class="login">
     <Header></Header>
-    <div class="container-login relative flex items-center">
+    <div
+      class="container-login relative flex items-center"
+      :style="{
+        'background-image': 'url(./assets/images/background-login.jpg)',
+      }"
+    >
       <form
         class="bg-white w-[350px] h-[430px] absolute left-28 xl:left-80 lg:left-40 md:left-32 rounded-2xl"
       >
@@ -138,7 +143,6 @@ export default {
 
 <style>
 .container-login {
-  background-image: url("./src/assets/images/background-login.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vh - 64px);
