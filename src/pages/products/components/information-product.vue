@@ -38,6 +38,27 @@
       <h3 class="text-[#EE4D2D] py-2 font-bold text-2xl">Sản phẩm liên quan</h3>
       <MutilCarousel :showItem="4"></MutilCarousel>
     </div>
+    <div class="my-5">
+      <h3 class="text-[#EE4D2D] py-2 font-bold text-2xl">Thông tin sản phẩm</h3>
+      <p class="description my-3 text-justify text-[#EE4D2D]">
+        Gạo thơm A An ST21 túi 5kg được thu hoạch từ giống lúa ST21 tự nhiên.
+        Gạo của thương hiệu A An được sản xuất trên dây chuyền hiện đại, cam kết
+        không đấu trộn, không chất tạo mùi, mang lại sản phẩm gạo chất lượng, an
+        toàn cho sức khoẻ người dùng
+      </p>
+      <div>
+        <div
+          class="flex gap-5 text-[#EE4D2D]"
+          v-for="({ content, characteristic }, index) in descriptions"
+          :key="index"
+        >
+          <div class="characteristic font-semibold text-md min-w-[100px]">
+            {{ characteristic }}
+          </div>
+          <div class="content">{{ content }}</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -51,6 +72,45 @@ export default {
   data: () => ({
     countProduct: 0,
     maxProduct: 20,
+    descriptions: [
+      {
+        characteristic: "Đặc tính",
+        content: "Dẻo nhiều, cơm mềm",
+      },
+      {
+        characteristic: "Độ nở",
+        content: "Nở ít",
+      },
+      {
+        characteristic: "Giống lúa",
+        content: "Giống lúa ST21",
+      },
+      {
+        characteristic: "Canh tác",
+        content:
+          "Theo quy trình chăm sóc khoa học, không chất kích thích tăng trưởng",
+      },
+      {
+        characteristic: "Cách nấu",
+        content: "1 chén gạo cho 1 - 1,2 chén nước (tăng giảm tuỳ khẩu vị)",
+      },
+      {
+        characteristic: "Bảo quản",
+        content: "Để nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp",
+      },
+      {
+        characteristic: "Trọng lượng",
+        content: "5kg",
+      },
+      {
+        characteristic: "Thương hiệu",
+        content: "A An",
+      },
+      {
+        characteristic: "Sản xuất tại",
+        content: "Việt Nam",
+      },
+    ],
     content: {
       active: false,
       notification: "",

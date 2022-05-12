@@ -5,6 +5,7 @@ import Login from "../pages/login/index.vue";
 import UpdateInformation from "../pages/users/information/index.vue";
 import ListProduct from "../pages/products/index.vue";
 import DetailProduct from "../pages/products/detail.vue";
+import ComingSoon from "../pages/coming-soon/index.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -25,6 +26,12 @@ const routes = [
     name: "DetailProduct",
     path: "/detail-product",
     component: DetailProduct,
+    meta: { layout: true },
+  },
+  {
+    name: "ComingSoon",
+    path: "/coming-soon",
+    component: ComingSoon,
     meta: { layout: true },
   },
 ];

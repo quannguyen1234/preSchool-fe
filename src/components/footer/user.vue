@@ -21,45 +21,45 @@
           </h3>
           <ul>
             <li>
-              <a
+              <router-link
                 class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-                href=""
-                >Lương thực</a
+                :to="{ name: 'ComingSoon' }"
+                >Lương thực</router-link
               >
             </li>
             <li>
-              <a
+              <router-link
                 class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-                href=""
-                >Thực phẩm tươi sống</a
+                :to="{ name: 'ComingSoon' }"
+                >Thực phẩm tươi sống</router-link
               >
             </li>
             <li>
-              <a
+              <router-link
                 class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-                href=""
-                >Thực phẩm đóng gói</a
+                :to="{ name: 'ComingSoon' }"
+                >Thực phẩm đóng gói</router-link
               >
             </li>
             <li>
-              <a
+              <router-link
                 class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-                href=""
-                >Nhu yếu phẩm khác</a
+                :to="{ name: 'ComingSoon' }"
+                >Nhu yếu phẩm khác</router-link
               >
             </li>
             <li>
-              <a
+              <router-link
                 class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-                href=""
-                >Bánh kẹo</a
+                :to="{ name: 'ComingSoon' }"
+                >Bánh kẹo</router-link
               >
             </li>
             <li>
-              <a
+              <router-link
                 class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md mb-4"
-                href=""
-                >Gia vị</a
+                :to="{ name: 'ComingSoon' }"
+                >Gia vị</router-link
               >
             </li>
           </ul>
@@ -71,45 +71,45 @@
         </h3>
         <ul>
           <li>
-            <a
+            <router-link
               class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-              href=""
-              >Chính sách bảo mật</a
+              :to="{ name: 'ComingSoon' }"
+              >Chính sách bảo mật</router-link
             >
           </li>
           <li>
-            <a
+            <router-link
               class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-              href=""
-              >Chính sách chăm sóc khách hàng</a
+              :to="{ name: 'ComingSoon' }"
+              >Chính sách chăm sóc khách hàng</router-link
             >
           </li>
           <li>
-            <a
+            <router-link
+              :to="{ name: 'ComingSoon' }"
               class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-              href=""
-              >Chính sách giao hàng</a
+              >Chính sách giao hàng</router-link
             >
           </li>
           <li>
-            <a
+            <router-link
+              :to="{ name: 'ComingSoon' }"
               class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-              href=""
-              >Vận chuyển</a
+              >Vận chuyển</router-link
             >
           </li>
           <li>
-            <a
+            <router-link
               class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-              href=""
-              >Chính sách bảo hành</a
+              :to="{ name: 'ComingSoon' }"
+              >Chính sách bảo hành</router-link
             >
           </li>
           <li>
-            <a
+            <router-link
               class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-              href=""
-              >Thanh toán</a
+              :to="{ name: 'ComingSoon' }"
+              >Thanh toán</router-link
             >
           </li>
         </ul>
@@ -127,7 +127,9 @@
               v-for="(item, index) in icons.map(handlePath)"
               :key="index"
             >
-              <a href=""><img class="w-8 h-8" :src="item" alt="" /></a>
+              <router-link :to="{ name: 'ComingSoon' }"
+                ><img class="w-8 h-8" :src="item" alt=""
+              /></router-link>
             </li>
           </ul>
         </div>
@@ -137,24 +139,24 @@
           </h3>
           <ul>
             <li>
-              <a
+              <router-link
                 class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-                href=""
-                >Điều khoản sử dụng</a
+                :to="{ name: 'ComingSoon' }"
+                >Điều khoản sử dụng</router-link
               >
             </li>
             <li>
-              <a
+              <router-link
                 class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-                href=""
-                >Trung tâm trợ giúp</a
+                :to="{ name: 'ComingSoon' }"
+                >Trung tâm trợ giúp</router-link
               >
             </li>
             <li>
-              <a
+              <router-link
                 class="p-2 block text-white hover:bg-[green] text-md transition-colors rounded-md"
-                href=""
-                >Helpee blog</a
+                :to="{ name: 'ComingSoon' }"
+                >Helpee blog</router-link
               >
             </li>
           </ul>

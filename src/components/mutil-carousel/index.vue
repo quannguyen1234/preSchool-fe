@@ -6,17 +6,19 @@
         :key="index"
         class="h-60 p-1 hover:shadow-xl"
       >
-        <div class="bg-[#F5F5F5] w-full h-full">
-          <img
-            class="w-[194px] h-[194px]"
-            :src="`./assets/images/products/${item}`"
-            alt=""
-          />
-          <span
-            class="p-2 w-[194px] block text-ellipsis overflow-hidden whitespace-nowrap"
-            >{{ item.split("-").join(" ") }}</span
-          >
-        </div>
+        <router-link :to="{ name: 'DetailProduct' }">
+          <div class="bg-[#F5F5F5] w-full h-full">
+            <img
+              class="w-[194px] h-[194px]"
+              :src="`./assets/images/products/${item}`"
+              alt=""
+            />
+            <span
+              class="p-2 w-[194px] block text-ellipsis overflow-hidden whitespace-nowrap"
+              >{{ item.split("-").join(" ") }}</span
+            >
+          </div>
+        </router-link>
       </div>
     </vue-slick-carousel>
   </div>

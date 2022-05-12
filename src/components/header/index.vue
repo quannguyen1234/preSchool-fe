@@ -11,7 +11,9 @@
       />
     </div>
     <div class="help-me">
-      <a href="" class="text-[#EE4D2D]">Cần trợ giúp?</a>
+      <router-link :to="{ name: 'ComingSoon' }" class="text-[#EE4D2D]"
+        >Cần trợ giúp?</router-link
+      >
     </div>
   </div>
 </template>

@@ -2,14 +2,14 @@
   <div class="header fixed z-50 w-full bg-white">
     <div class="flex mx-auto xl:max-w-5xl justify-between items-center h-14">
       <div class="logo w-32 h-12">
-        <a href="">
+        <router-link :to="{ name: 'Home' }">
           <img
             class="w-full h-full"
             :src="require('../../assets/images/icon.png')"
             alt=""
             srcset=""
           />
-        </a>
+        </router-link>
       </div>
       <div class="flex justify-end gap-8 items-center">
         <div class="search">
@@ -20,12 +20,12 @@
           />
         </div>
         <div class="flex gap-3">
-          <router-link to="/"><Bell></Bell></router-link>
-          <router-link to="/list-product"><Cart></Cart></router-link>
-          <router-link :to="{ name: 'Home' }"
+          <router-link :to="{ name: 'ComingSoon' }"><Bell></Bell></router-link>
+          <router-link :to="{ name: 'ComingSoon' }"><Cart></Cart></router-link>
+          <router-link :to="{ name: 'ComingSoon' }"
             ><Messages></Messages
           ></router-link>
-          <router-link :to="{ name: 'Home' }"><User></User></router-link>
+          <router-link :to="{ name: 'ComingSoon' }"><User></User></router-link>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@
       :key="index"
     >
       <div>
-        <router-link :to="{ path: '' }">
+        <router-link :to="{ name: 'ComingSoon' }">
           <img :src="item" alt="" />
         </router-link>
       </div>

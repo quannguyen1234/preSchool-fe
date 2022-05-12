@@ -5,28 +5,23 @@
       v-for="(item, index) in products"
       :key="index"
     >
-      <router-link :to="{ path: '/' }"
-        ><div class="container-product-image">
-          <img
-            class="h-full w-full"
-            :src="`./assets/images/products/${item}`"
-            alt=""
-          />
-        </div>
-        <p class="uppercase text-center py-1">Cải bẹ xanh (1kg)</p>
-        <div class="flex justify-evenly items-center w-full py-2">
-          <span>13.000đ</span>
-          <span
-            class="rounded-full border-[black] inline-block"
-            @click="
-              () => {
-                console.log('xxx');
-              }
-            "
-          >
-            <cart></cart>
-          </span></div
-      ></router-link>
+      <div class="container-product-image" @click="directProdcutDetail()">
+        <img
+          class="h-full w-full"
+          :src="`./assets/images/products/${item}`"
+          alt=""
+        />
+      </div>
+      <p class="uppercase text-center py-1">Cải bẹ xanh (1kg)</p>
+      <div class="flex justify-evenly items-center w-full py-2">
+        <span>13.000đ</span>
+        <span
+          class="rounded-full border-[black] inline-block"
+          @click="addToCart()"
+        >
+          <cart></cart>
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -55,6 +50,15 @@ export default {
         "trung-ga.jpg",
       ],
     };
+  },
+  methods: {
+    directProdcutDetail() {
+      this.$router.push({ name: "DetailProduct" });
+    },
+    addToCart() {
+      console.log("xxxxxxxxxxxxssssssssssssss");
+      this.$router.push({ name: "ComingSoon" });
+    },
   },
   components: {
     Cart,

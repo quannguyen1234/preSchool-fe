@@ -20,21 +20,21 @@
       <li
         class="cursor-pointer hover:bg-[#32CB00] h-full leading-[56px] transition-colors"
       >
-        <router-link class="block px-5" :to="{ name: 'Home' }"
+        <router-link class="block px-5" :to="{ name: 'ComingSoon' }"
           >Hợp tác</router-link
         >
       </li>
       <li
         class="cursor-pointer hover:bg-[#32CB00] h-full leading-[56px] transition-colors"
       >
-        <router-link class="block px-5" :to="{ name: 'Home' }"
+        <router-link class="block px-5" :to="{ name: 'ComingSoon' }"
           >Tin tức</router-link
         >
       </li>
       <li
         class="cursor-pointer hover:bg-[#32CB00] h-full leading-[56px] transition-colors"
       >
-        <router-link class="block px-5" :to="{ name: 'Home' }"
+        <router-link class="block px-5" :to="{ name: 'ComingSoon' }"
           >Liên hệ</router-link
         >
       </li>
