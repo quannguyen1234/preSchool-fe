@@ -22,10 +22,6 @@ jobs:
           yarn build
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
-        with:
-          username: [nhatdn]
-          reponame: [helpee]
-          token: ${{ secrets.GITHUB_TOKEN }}
         env:
           REPO: self
           BRANCH: master
