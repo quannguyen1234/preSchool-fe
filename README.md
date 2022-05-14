@@ -1,16 +1,16 @@
-#UI
+# UI
 
-##Login
+## Login
 ![Login](./images/login.jpg)
 
-##Login
+##Home
 ![Home](./images/home.jpg)
 
-##Product detail
+## Product detail
 ![Product detai](./images/product-detail.jpg)
 
-##List products
+## List products
 ![List products](./images/products.jpg)
 
-##Update information
+## Update information
 ![List products](./images/update-information.jpg)
