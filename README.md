@@ -1,24 +1,16 @@
-# helpee
+#UI
 
-## Project setup
-```
-npm install
-```
+##Login
+![Login](./images/login.jpg)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+##Login
+![Home](./images/home.jpg)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+##Product detail
+![Product detai](./images/product-detail.jpg)
 
-### Lints and fixes files
-```
-npm run lint
-```
+##List products
+![List products](./images/products.jpg)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+##Update information
+![List products](./images/update-information.jpg)
