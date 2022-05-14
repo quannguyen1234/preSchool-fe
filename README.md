@@ -3,7 +3,7 @@
 ## Login
 ![Login](./images/login.jpg)
 
-##Home
+## Home
 ![Home](./images/home.jpg)
 
 ## Product detail
