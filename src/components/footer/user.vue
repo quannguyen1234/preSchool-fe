@@ -10,7 +10,7 @@
           </h3>
           <p class="text-white pl-2 text-justify">
             Đây là trang web phi lợi nhuận nhằm hỗ trợ bà con và các cán bộ
-            trong công tác “đi chợ hộ”.
+            trong công tác “đi chợ hộ.
           </p>
         </div>
         <div class="categories-of-product">

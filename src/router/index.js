@@ -24,7 +24,7 @@ const routes = [
   },
   {
     name: "DetailProduct",
-    path: "/detail-product",
+    path: "/detail-product/:id",
     component: DetailProduct,
     meta: { layout: true },
   },

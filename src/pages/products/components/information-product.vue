@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="information-product flex">
-      <div class="w-1/3">
-        <img :src="'./assets/images/products/detail/gao-thom.jpg'" alt="" />
+      <div class="w-full align-center flex justify-center">
+        <img :src="'https://cdn-icons-png.flaticon.com/512/2771/2771401.png'" alt="" />
       </div>
-      <div class="w-2/3">
+      <!-- <div class="w-2/3">
         <p class="text-[#EE4D2D] text-2xl font-bold mb-4">Gạo ST21 A An</p>
         <div class="rates flex items-center w-full gap-4 my-3">
           <div><Rate></Rate></div>
@@ -31,31 +31,30 @@
           <vs-button warn gradient> <span>Thêm vào giỏ hàng</span> </vs-button>
           <vs-button warn gradient> <span>Mua ngay</span> </vs-button>
         </div>
-      </div>
+      </div> -->
       <Alert @closeAlert="resetNotification()" :content="content"> </Alert>
     </div>
     <div class="my-5">
-      <h3 class="text-[#EE4D2D] py-2 font-bold text-2xl">Sản phẩm liên quan</h3>
-      <MutilCarousel :showItem="4"></MutilCarousel>
+      <!-- <h3 class="text-[#EE4D2D] py-2 font-bold text-2xl">Sản phẩm liên quan</h3> -->
+      <!-- <MutilCarousel :showItem="4"></MutilCarousel> -->
     </div>
     <div class="my-5">
-      <h3 class="text-[#EE4D2D] py-2 font-bold text-2xl">Thông tin sản phẩm</h3>
+      <h3 class="text-[#EE4D2D] py-2 font-bold text-2xl">Thông tin công thức nấu ăn</h3>
+      <p class="description my-3 text-justify text-[#EE4D2D]"> {{ detailProduct.name }}</p>
       <p class="description my-3 text-justify text-[#EE4D2D]">
-        Gạo thơm A An ST21 túi 5kg được thu hoạch từ giống lúa ST21 tự nhiên.
-        Gạo của thương hiệu A An được sản xuất trên dây chuyền hiện đại, cam kết
-        không đấu trộn, không chất tạo mùi, mang lại sản phẩm gạo chất lượng, an
-        toàn cho sức khoẻ người dùng
+        {{ detailProduct.description }}
       </p>
+      <p class="text-[#EE4D2D] py-2 font-bold text-md">Các thực phẩm, gia vị cần có:</p>
       <div>
         <div
           class="flex gap-5 text-[#EE4D2D]"
-          v-for="({ content, characteristic }, index) in descriptions"
+          v-for="({ name, quantity }, index) in detailProduct.ingredients"
           :key="index"
         >
           <div class="characteristic font-semibold text-md min-w-[100px]">
-            {{ characteristic }}
+            {{ name }}
           </div>
-          <div class="content">{{ content }}</div>
+          <div class="content">{{ quantity }}</div>
         </div>
       </div>
     </div>
@@ -63,12 +62,18 @@
 </template>
 
 <script>
-import MutilCarousel from "../../../components/mutil-carousel/index.vue";
+// import MutilCarousel from "../../../components/mutil-carousel/index.vue";
 import Alert from "../../../components/alert/index.vue";
-import Rate from "../../../components/rate/index.vue";
-import Add from "../../../components/icons/add.vue";
-import Minus from "../../../components/icons/minus.vue";
+// import Rate from "../../../components/rate/index.vue";
+// import Add from "../../../components/icons/add.vue";
+// import Minus from "../../../components/icons/minus.vue";
 export default {
+  props: {
+    detailProduct: {}
+  },
+  created() {
+    console.log("this.detailProduct: ", this.detailProduct);
+  },
   data: () => ({
     countProduct: 0,
     maxProduct: 20,
@@ -117,11 +122,11 @@ export default {
     },
   }),
   components: {
-    Rate,
-    Add,
-    Minus,
+    // Rate,
+    // Add,
+    // Minus,
     Alert,
-    MutilCarousel,
+    // MutilCarousel,
   },
   methods: {
     overMax() {

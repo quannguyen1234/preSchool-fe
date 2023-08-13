@@ -18,7 +18,7 @@
             <label for="">Tài khoản:</label>
             <vs-input
               border
-              v-model="account.username"
+              v-model="account.email"
               :placeholder="placeholderUsername"
             />
             <span v-if="checkUsername" class="text-sm text-red-500"
@@ -34,7 +34,6 @@
               type="password"
               :placeholder="placeholderPassword"
               v-model="account.password"
-              :progress="getProgress"
               :visiblePassword="hasVisiblePassword"
               icon-after
               @click-icon="hasVisiblePassword = !hasVisiblePassword"
@@ -83,12 +82,14 @@ import Eye from "../../components/icons/eye.vue";
 import EyeOff from "../../components/icons/eyeOff.vue";
 import Header from "../../components/header/index.vue";
 import Login from "../../components/icons/login.vue";
+import { login } from "../../apis/auth";
+import { setLocalToken } from "../../helpers"
 export default {
   data: () => {
     return {
       hasVisiblePassword: false,
       account: {
-        username: "",
+        email: "",
         password: "",
       },
       checkUsername: false,
@@ -97,18 +98,8 @@ export default {
     };
   },
   computed: {
-    computed: {
-      getProgress() {
-        let progress = 0;
-        if (/[^A-Za-z0-9]/.test(this.account.password)) {
-          progress += 20;
-        }
-
-        return progress;
-      },
-    },
     placeholderUsername() {
-      return this.account.username.length > 0 ? "" : "Username";
+      return this.account.email.length > 0 ? "" : "Email";
     },
     placeholderPassword() {
       return this.account.password.length > 0 ? "" : "Password";
@@ -121,14 +112,24 @@ export default {
     EyeOff,
   },
   methods: {
-    openLoading() {
+    async openLoading() {
       const loading = this.$vs.loading({
         text: "Loading...",
       });
-      setTimeout(() => {
-        loading.close();
-        this.openNotification("bottom-right");
-      }, 3000);
+      try {
+        let data = await login(this .account);
+        if(!data?.data) {
+          this.openNotification("bottom-right");
+          loading.close();
+          return;
+        }
+        setLocalToken(data.data.access_token);
+        this.$router.push({ name: "Home" });
+      } catch (e) {
+        console.error(e);
+      }
+      loading.close();
+
     },
     openNotification(position = null) {
       this.$vs.notification({

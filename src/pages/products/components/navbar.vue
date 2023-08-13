@@ -10,12 +10,12 @@
       <vs-button color="#EE4D2D"> Mới nhất </vs-button>
     </div>
     <div>
-      <vs-button color="#EE4D2D"> Bán chạy </vs-button>
+      <vs-button color="#EE4D2D"> Nhiều bình luận nhất </vs-button>
     </div>
     <div class="center con-selects">
       <vs-select :color="'#EE4D2D'" placeholder="Select" v-model="color">
-        <vs-option label="Giá tăng" value="1"> Giá tăng </vs-option>
-        <vs-option label="Giá giảm" value="2"> Giá giảm </vs-option>
+        <vs-option label="Mới nhất" value="1"> Mới nhất </vs-option>
+        <vs-option label="Quan tâm nhất" value="2"> Quan tâm nhất </vs-option>
       </vs-select>
     </div>
   </div>

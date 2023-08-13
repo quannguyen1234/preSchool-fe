@@ -37,7 +37,6 @@ export default {
     if (this.checking) {
       return;
     }
-    console.log("xxx");
     this.$emit("closeAlert", false);
   },
 };

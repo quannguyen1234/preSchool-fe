@@ -14,7 +14,7 @@
         class="cursor-pointer hover:bg-[#32CB00] h-full leading-[56px] transition-colors"
       >
         <router-link class="block px-5" :to="{ name: 'ListProduct' }"
-          >Danh mục sản phẩm</router-link
+          >Danh sách công thức nấu ăn</router-link
         >
       </li>
       <li
