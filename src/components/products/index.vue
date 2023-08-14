@@ -9,20 +9,13 @@
       <div class="container-product-image" @click="directProdcutDetail(item)">
         <img
           class="h-full w-full"
-          :src="`https://cdn-icons-png.flaticon.com/512/2771/2771401.png`"
+
+          :src= "item.image"
           alt=""
         />
       </div>
       <p class="uppercase text-center py-1">{{ item.name }}</p>
-      <!-- <div class="flex justify-evenly items-center w-full py-2">
-        <span>13.000đ</span>
-        <span
-          class="rounded-full border-[black] inline-block"
-          @click="addToCart()"
-        >
-          <cart></cart>
-        </span>
-      </div> -->
+     
     </div>
   </div>
   <div style="display: flex; justify-content: center;" v-if="products.length == 0"> Không có dữ liệu</div>
@@ -32,15 +25,19 @@
 <script>
 // import Cart from "../icons/cart.vue";
 import { getListCooking } from "@/apis/foods";
-
+import { API_URL } from "@/constants";
 export default {
   data() {
     return {
       products: [],
+      API_URL:API_URL
     };
   },
-  created() {
-    this.handleGetListCooking();
+  async created() {
+    
+    await this.handleGetListCooking();
+    this.handlePathImage();
+  
   },
   methods: {
     directProdcutDetail(item) {
@@ -55,7 +52,18 @@ export default {
       if(data?.data?.recipes) {
         this.products = data?.data?.recipes;
       }
-    }
+    },
+    handlePathImage(){
+     
+        this.products.map(function(pro){
+          if (pro.image)
+            pro.image = `${API_URL}/images/${pro.image}`;
+          else{
+            pro.image = `https://cdn-icons-png.flaticon.com/512/2771/2771401.png`
+          }
+          return pro;
+        });
+      }
   },
   components: {
     // Cart,
@@ -63,4 +71,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+  .img{
+    
+  }
+</style>

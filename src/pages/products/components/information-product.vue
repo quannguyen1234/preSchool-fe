@@ -4,34 +4,7 @@
       <div class="w-full align-center flex justify-center">
         <img :src="'https://cdn-icons-png.flaticon.com/512/2771/2771401.png'" alt="" />
       </div>
-      <!-- <div class="w-2/3">
-        <p class="text-[#EE4D2D] text-2xl font-bold mb-4">Gạo ST21 A An</p>
-        <div class="rates flex items-center w-full gap-4 my-3">
-          <div><Rate></Rate></div>
-          <div><span class="text-lg border-l-2 pl-4 h-5">3 đánh giá</span></div>
-          <div><span class="text-lg border-l-2 pl-4 h-5">3 đã bán</span></div>
-        </div>
-        <p class="text-lg text-gray-600 my-2">Hạn sử dụng 6 tháng</p>
-        <span class="font-bold text-2xl text-[#EE4D2D]">10000đ</span>
-        <div class="flex items-center h-10 gap-2">
-          <p>Số lượng:</p>
-          <div class="flex items-center h-10 gap-2">
-            <button @click="overMin()">
-              <Minus></Minus>
-            </button>
-
-            <span class="w-6 text-center">{{ countProduct }}</span>
-            <button @click="overMax()">
-              <Add></Add>
-            </button>
-            <span>{{ maxProduct }} Sản phẩm có sẵn</span>
-          </div>
-        </div>
-        <div class="flex gap-2 my-2">
-          <vs-button warn gradient> <span>Thêm vào giỏ hàng</span> </vs-button>
-          <vs-button warn gradient> <span>Mua ngay</span> </vs-button>
-        </div>
-      </div> -->
+      
       <Alert @closeAlert="resetNotification()" :content="content"> </Alert>
     </div>
     <div class="my-5">

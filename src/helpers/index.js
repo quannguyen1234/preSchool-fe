@@ -2,7 +2,7 @@ export function clearToken() {
     localStorage.clear();
 }
 // Get TOKEN
-export function getLocalToken() {
+  export function getLocalToken() {
     return window.localStorage.getItem('token');
   }
   export function getLocalRefreshToken() {
@@ -12,6 +12,15 @@ export function getLocalToken() {
   // Set TOKEN
   export function setLocalToken(newToken) {
     window.localStorage.setItem('token', newToken);
+  }
+
+  export function getInfor() {
+    const name=window.localStorage.getItem('userName')
+    return {name:name};
+  }
+
+  export function setName(name) {
+    window.localStorage.setItem('userName', name);
   }
   export function setLocalRefreshToken(newRefeshToken) {
     window.localStorage.setItem('refreshToken', newRefeshToken);

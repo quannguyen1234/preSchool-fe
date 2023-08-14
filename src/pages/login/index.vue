@@ -83,7 +83,7 @@ import EyeOff from "../../components/icons/eyeOff.vue";
 import Header from "../../components/header/index.vue";
 import Login from "../../components/icons/login.vue";
 import { login } from "../../apis/auth";
-import { setLocalToken } from "../../helpers"
+import { setLocalToken,setName } from "../../helpers"
 export default {
   data: () => {
     return {
@@ -124,6 +124,8 @@ export default {
           return;
         }
         setLocalToken(data.data.access_token);
+        setName(data.data.infor.name);
+        console.log(data.data.infor.name);
         this.$router.push({ name: "Home" });
       } catch (e) {
         console.error(e);

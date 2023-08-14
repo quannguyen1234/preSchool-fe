@@ -5,6 +5,7 @@ import Login from "../pages/login/index.vue";
 import UpdateInformation from "../pages/users/information/index.vue";
 import ListProduct from "../pages/products/index.vue";
 import DetailProduct from "../pages/products/detail.vue";
+import PersonalPage from '@/pages/personal-page/index.vue';
 import ComingSoon from "../pages/coming-soon/index.vue";
 Vue.use(VueRouter);
 
@@ -14,6 +15,12 @@ const routes = [
     name: "ListProduct",
     path: "/list-product",
     component: ListProduct,
+    meta: { layout: true },
+  },
+  {
+    name: "PersonalPage",
+    path: "/personal-page",
+    component:PersonalPage ,
     meta: { layout: true },
   },
   { name: "Login", path: "/login", component: Login },

@@ -25,7 +25,7 @@
           <router-link :to="{ name: 'ComingSoon' }"
             ><Messages></Messages
           ></router-link>
-          <router-link :to="{ name: 'ComingSoon' }"><User></User></router-link>
+          <router-link :to="{ name: 'PersonalPage' }"><User></User></router-link>
         </div>
       </div>
     </div>
